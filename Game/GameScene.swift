@@ -22,7 +22,7 @@ class GameScene: SKScene {
         playerSprite.xScale = 2.0
         playerSprite.yScale = 2.0
         addChild(playerSprite)
-        player = GameObject(sprite: playerSprite, direction: Float.pi / 2, speed: 300)
+        player = GameObject(sprite: playerSprite, direction: Float.pi / 2, speed: 0)
         
         let spawn = SKAction.run {
             let enemySprite = SKSpriteNode(imageNamed: "Enemy")
@@ -37,22 +37,6 @@ class GameScene: SKScene {
         
         let wait = SKAction.wait(forDuration: 4.0)
         run(SKAction.repeatForever(SKAction.sequence([spawn, wait])))
-        
-        /*
-        let shoot = SKAction.run {
-            let shotSprite = SKSpriteNode(imageNamed: "Shot")
-            shotSprite.position = self.player.sprite.position
-            shotSprite.xScale = 2.0
-            shotSprite.yScale = 2.0
-            self.addChild(shotSprite)
-            let shot = GameObject(sprite: shotSprite, direction: Float.pi / 2, speed: 500)
-            self.shots.append(shot)
-        }
-        
-        let cooldown = SKAction.wait(forDuration: 1.0)
-        run(SKAction.repeatForever(SKAction.sequence([shoot, cooldown])))
- 
-         */
         
         if let starField = SKEmitterNode(fileNamed: "StarField") {
             addChild(starField)
@@ -100,12 +84,27 @@ class GameScene: SKScene {
                 shot.tick(dt: dt)
                 for enemy in enemies {
                     if withinDistance(enemy.sprite.position, shot.sprite.position, distance: 100.0) {
+                        
+                        
+                        if let sparks = SKEmitterNode(fileNamed: "Sparks") {
+                            self.addChild(sparks)
+                            sparks.position = CGPoint(x: enemy.sprite.position.x, y: enemy.sprite.position.y)
+                            DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) {
+                                sparks.removeFromParent()
+
+                            }
+                        }
+ 
+ 
                         enemy.sprite.removeFromParent()
                         shot.sprite.removeFromParent()
                         enemy.alive = false
                         shot.alive = false
                     }
+                    
+                    
                 }
+                
                 enemies = enemies.filter({ e in e.alive })
                 shots = shots.filter({ s in s.alive })
             }

@@ -17,6 +17,8 @@
 		659B2A7C20872D010055E50E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 659B2A7A20872D010055E50E /* LaunchScreen.storyboard */; };
 		659B2A84208731440055E50E /* GameObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 659B2A83208731440055E50E /* GameObject.swift */; };
 		659B2A86208760600055E50E /* StarField.sks in Resources */ = {isa = PBXBuildFile; fileRef = 659B2A85208760600055E50E /* StarField.sks */; };
+		659B2A8820876DE20055E50E /* Sparks.sks in Resources */ = {isa = PBXBuildFile; fileRef = 659B2A8720876DE20055E50E /* Sparks.sks */; };
+		659B2A8A2087739C0055E50E /* Smoke.sks in Resources */ = {isa = PBXBuildFile; fileRef = 659B2A892087739C0055E50E /* Smoke.sks */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +34,8 @@
 		659B2A7D20872D010055E50E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		659B2A83208731440055E50E /* GameObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameObject.swift; sourceTree = "<group>"; };
 		659B2A85208760600055E50E /* StarField.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = StarField.sks; sourceTree = "<group>"; };
+		659B2A8720876DE20055E50E /* Sparks.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Sparks.sks; sourceTree = "<group>"; };
+		659B2A892087739C0055E50E /* Smoke.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Smoke.sks; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,6 +79,8 @@
 				659B2A7D20872D010055E50E /* Info.plist */,
 				659B2A83208731440055E50E /* GameObject.swift */,
 				659B2A85208760600055E50E /* StarField.sks */,
+				659B2A8720876DE20055E50E /* Sparks.sks */,
+				659B2A892087739C0055E50E /* Smoke.sks */,
 			);
 			path = Game;
 			sourceTree = "<group>";
@@ -137,12 +143,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				659B2A8820876DE20055E50E /* Sparks.sks in Resources */,
 				659B2A86208760600055E50E /* StarField.sks in Resources */,
 				659B2A7720872CFD0055E50E /* Main.storyboard in Resources */,
 				659B2A6E20872CFD0055E50E /* GameScene.sks in Resources */,
 				659B2A7920872D010055E50E /* Assets.xcassets in Resources */,
 				659B2A7C20872D010055E50E /* LaunchScreen.storyboard in Resources */,
 				659B2A7020872CFD0055E50E /* Actions.sks in Resources */,
+				659B2A8A2087739C0055E50E /* Smoke.sks in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
