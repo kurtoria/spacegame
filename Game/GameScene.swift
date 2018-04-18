@@ -87,14 +87,23 @@ class GameScene: SKScene {
                         
                         
                         if let sparks = SKEmitterNode(fileNamed: "Sparks") {
-                            self.addChild(sparks)
-                            sparks.position = CGPoint(x: enemy.sprite.position.x, y: enemy.sprite.position.y)
-                            DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) {
-                                sparks.removeFromParent()
-
+                            //self.addChild(sparks)
+                            //sparks.position = CGPoint(x: enemy.sprite.position.x, y: enemy.sprite.position.y)
+                            if let smoke = SKEmitterNode(fileNamed: "Smok") {
+                                self.addChild(sparks)
+                                sparks.position = CGPoint(x: enemy.sprite.position.x, y: enemy.sprite.position.y)
+                                self.addChild(smoke)
+                                smoke.position = CGPoint(x: sparks.position.x, y: sparks.position.y)
+                                
+                                DispatchQueue.main.asyncAfter(deadline: .now() + 0.2, execute: {
+                                    sparks.removeFromParent()
+                                })
+                                
+                                DispatchQueue.main.asyncAfter(deadline: .now() + 2, execute: {
+                                    smoke.removeFromParent()
+                                })
                             }
                         }
- 
  
                         enemy.sprite.removeFromParent()
                         shot.sprite.removeFromParent()

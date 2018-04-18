@@ -19,6 +19,7 @@
 		659B2A86208760600055E50E /* StarField.sks in Resources */ = {isa = PBXBuildFile; fileRef = 659B2A85208760600055E50E /* StarField.sks */; };
 		659B2A8820876DE20055E50E /* Sparks.sks in Resources */ = {isa = PBXBuildFile; fileRef = 659B2A8720876DE20055E50E /* Sparks.sks */; };
 		659B2A8A2087739C0055E50E /* Smoke.sks in Resources */ = {isa = PBXBuildFile; fileRef = 659B2A892087739C0055E50E /* Smoke.sks */; };
+		659B2A8C208779220055E50E /* Smok.sks in Resources */ = {isa = PBXBuildFile; fileRef = 659B2A8B208779220055E50E /* Smok.sks */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +37,7 @@
 		659B2A85208760600055E50E /* StarField.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = StarField.sks; sourceTree = "<group>"; };
 		659B2A8720876DE20055E50E /* Sparks.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Sparks.sks; sourceTree = "<group>"; };
 		659B2A892087739C0055E50E /* Smoke.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Smoke.sks; sourceTree = "<group>"; };
+		659B2A8B208779220055E50E /* Smok.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Smok.sks; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +83,7 @@
 				659B2A85208760600055E50E /* StarField.sks */,
 				659B2A8720876DE20055E50E /* Sparks.sks */,
 				659B2A892087739C0055E50E /* Smoke.sks */,
+				659B2A8B208779220055E50E /* Smok.sks */,
 			);
 			path = Game;
 			sourceTree = "<group>";
@@ -143,6 +146,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				659B2A8C208779220055E50E /* Smok.sks in Resources */,
 				659B2A8820876DE20055E50E /* Sparks.sks in Resources */,
 				659B2A86208760600055E50E /* StarField.sks in Resources */,
 				659B2A7720872CFD0055E50E /* Main.storyboard in Resources */,
